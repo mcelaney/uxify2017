@@ -1,13 +1,21 @@
 <!doctype html>
-<html>
+<html lang="en">
+
 	<head>
 		<meta charset="utf-8">
+
+		<title>Mac Presents: Glue – The Tool Between Us</title>
+
+		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+		<meta name="author" content="Hakim El Hattab">
+
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>reveal.js</title>
-
 		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/black.css">
+		<link rel="stylesheet" href="css/theme/black.css" id="theme">
 
 		<!-- Theme used for syntax highlighting of code -->
 		<link rel="stylesheet" href="lib/css/zenburn.css">
@@ -20,31 +28,360 @@
 			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
 			document.getElementsByTagName( 'head' )[0].appendChild( link );
 		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
 	</head>
+
 	<body>
+
 		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
+				<section style="text-align: left;">
+					<h1>Glue</h1>
+					<h3>The Tools Between Us</h3>
+					<p>
+						<small>Integrating Development and Design</small>
+					</p>
+				</section>
+				<section style="text-align: center;">
+					<section data-background="assets/01_mac.jpg">
+						<h2>Hi, I'm Mac!</h2>
+					</section>
+					<section data-background="assets/02_revzilla.jpg">
+					</section>
+					<section style="text-align: center;">
+						<img src="assets/03_revzilla.com.png" />
+					</section>
+					<section style="text-align: center;">
+						<img src="assets/04_kevin.jpg" />
+						<small>(Image stolen from Kevin Richardson)</small>
+					</section>
+					<section style="text-align: center;">
+						<img src="assets/04_dirt.jpg" />
+					</section>
+					<section data-background="assets/04_other.gif">
+					</section>
+				</section>
+
+				<section style="text-align: center;">
+					<section style="text-align: center;">
+						<img src="assets/05_data.png" />
+					</section>
+					<section style="text-align: center;">
+						<img src="assets/05_purchases.png" />
+					</section>
+					<section style="text-align: center;">
+						<img src="assets/06_zla.png" />
+					</section>
+					<section style="text-align: center;">
+						<p>Personalized is not the same as personal.</p>
+					</section>
+				</section>
+
+				<section style="text-align: center;">
+					<section style="text-align: center;">
+						<img src="assets/08_google.png" />
+					</section>
+					<section style="text-align: center;">
+						<img src="assets/09_designers.jpg" />
+					</section>
+					<section style="text-align: center;">
+						<img src="assets/09_developers.jpg" /><br />
+					</section>
+					<section style="text-align: left;">
+						How do we communicate more effectively while retaining the value of the focus of our disciplines?
+					</section>
+				</section>
+
+				<section style="text-align: left;">
+					<section style="text-align: left;">
+						<ul>
+							<li>Define common themes and patterns</li>
+							<li>Automate testing for those patterns</li>
+						</ul>
+					</section>
+				</section>
+
+				<section style="text-align: left;">
+					<section style="text-align: left;">
+						<h2>Build a Design System</h2>
+						<ul>
+							<li>Set of rules defining how a system is built</li>
+							<li>Provides a Project Vocabulary</li>
+							<li>Artifacts not Deliverables</li>
+							<li>Much of it can be in a coded form</li>
+						</ul>
+					</section>
+
+					<section style="text-align: center;">
+						<h2>Atomic Design</h2>
+						<img src="assets/13_atomic.png" />
+					</section>
+					<section style="text-align: center;">
+						<h2>PatternLab</h2>
+						<img src="assets/13_patternlab.gif" />
+					</section>
+					<section style="text-align: center;">
+						<h2>Zurb/Foundation/Whatevs</h2>
+						<img src="assets/12_kitchen.gif" />
+					</section>
+
+					<section style="text-align: left;">
+						<ul>
+							<li>Use on any non-trivial project</li>
+							<li>Check it in to source control</li>
+							<li>It should change any time CSS changes</li>
+						</ul>
+					</section>
+
+					<section style="text-align: left;">
+						<ul>
+							<li>Everyone: Vocabulary to discuss edge cases</li>
+							<li>Developers: Reference while coding</li>
+							<li>Designers: Devs who can code off pen sketches</li>
+						</ul>
+					</section>
+				</section>
+
+				<section style="text-align: left;">
+					<section style="text-align: left;">
+						<h2>Visual Regression Testing</h2>
+						<ul>
+							<li>Code that takes and compares screenshots</li>
+							<li>Highlights changes between versions of CSS</li>
+						</ul>
+					</section>
+					<section style="text-align: center;">
+						<h2>PhantomCSS</h2>
+						<img src="assets/14_regression.png" />
+					</section>
+					<section style="text-align: left;">
+						<ul>
+							<li>Changing Inherited Projects</li>
+							<li>Building a Project to Pass Off</li>
+							<li>Rapidly Changing UIs</li>
+						</ul>
+					</section>
+					<section style="text-align: left;">
+						<ul>
+							<li>Changes when the CSS changes</li>
+							<li>Run as part of Continual Integration</li>
+						</ul>
+					</section>
+					<section style="text-align: left;">
+						<ul>
+							<li>Developers: confidence to make visual tweaks</li>
+							<li>Designers: an easier time in visual QA</li>
+						</ul>
+					</section>
+				</section>
+
+				<section style="text-align: left;">
+					<section style="text-align: left;">
+						<h2>A/B Testing</h2>
+						<ul>
+							<li>Build multiple versions of something</li>
+							<li>Randomly show versions to users</li>
+							<li>Analyze the results</li>
+						</ul>
+					</section>
+
+					<section style="text-align: center;">
+						<h2>Optimizely</h2>
+						<img src="assets/15_AB.gif" />
+					</section>
+
+					<section style="text-align: left;">
+						<ul>
+							<li>Highly Transactional Systems</li>
+							<li>Anything Consumer Facing (conversions)</li>
+						</ul>
+					</section>
+
+					<section style="text-align: left;">
+						<ul>
+							<li>In production after Qual Research</li>
+							<li>Do it.  Do it live.</li>
+						</ul>
+					</section>
+
+					<section style="text-align: left;">
+						<ul>
+							<li>Developers: It's more data - you're already on board</li>
+							<li>Designers: One less reason to get shot down</li>
+						</ul>
+					</section>
+				</section>
+
+				<section style="text-align: left;">
+					<section style="text-align: left;">
+						<h2>Automated UAT</h2>
+						<ul>
+							<li>Clearly define workflows</li>
+							<li>Clearly define expectations</li>
+							<li>Write code to click on things for you</li>
+						</ul>
+					</section>
+
+					<section style="text-align: center;">
+						<h2>Specflow (BDD)</h2>
+						<img src="assets/16_specflow.png" />
+					</section>
+
+					<section style="text-align: center;">
+						<h2>Netling (Load Testing)</h2>
+						<img src="assets/17_netling.png" />
+					</section>
+
+					<section style="text-align: left;">
+						<ul>
+							<li>Not on "brochureware"</li>
+							<li>... unless you're getting a ton of traffic</li>
+						</ul>
+					</section>
+
+					<section style="text-align: left;">
+						<ul>
+							<li>During the design process: Generate workflows </li>
+							<li>Before you write the code: Write tests</li>
+							<li>Before QA starts: Tests pass</li>
+							<li>Run test suite in CI</li>
+						</ul>
+					</section>
+
+					<section style="text-align: left;">
+						<ul>
+							<li>Everyone: Better requirements</li>
+							<li>Developers: Easier refactoring</li>
+							<li>Designers: Vocabulary to discuss changes</li>
+						</ul>
+					</section>
+				</section>
+
+				<section style="text-align: left;">
+					<section style="text-align: left;">
+						<h2>User Testing</h2>
+						<ul>
+							<li>Minimum Viable</li>
+							<li>On Prototypes</li>
+							<li>During Dev sprints</li>
+							<li>After Launch</li>
+						</ul>
+					</section>
+
+					<section style="text-align: center;">
+						<h2>Erika Hall</h2>
+						<img src="assets/18_just.png" />
+					</section>
+
+					<section style="text-align: center;">
+						<h2>Jeff Gothelf</h2>
+						<img src="assets/18_lean.jpg" />
+					</section>
+
+					<section style="text-align: left;">
+						<ul>
+							<li>Anything non-trivial</li>
+						</ul>
+					</section>
+
+					<section style="text-align: left;">
+						<ul>
+							<li>Against prototypes in design sprint</li>
+							<li>Against completed work in sprints</li>
+							<li>UAT</li>
+						</ul>
+					</section>
+
+					<section style="text-align: left;">
+						<ul>
+							<li>Everyone: Better requirements</li>
+							<li>Developers: Less post launch pain</li>
+							<li>Designers: Developers with Empathy</li>
+						</ul>
+					</section>
+				</section>
+
+				<section style="text-align: left;">
+					<section style="text-align: center;">
+						<h2>Slow down and take time to communicate</h2>
+					</section>
+				</section>
+
+				<section style="text-align: left;">
+					<section style="text-align: left;">
+						<h2>Brian McElaney</h2>
+						<ul>
+							<li>https://github.com/mcelaney/uxify2017/</li>
+							<li>https://twitter.com/mcelaney</li>
+							<li>mac@revzilla.com</li>
+							<li>https://www.revzilla.com/careers</li>
+						</ul>
+					</section>
+				</section>
+
+				<section>
+					<h2>Image credits</h2>
+
+					<ul>
+						<li>01_mac.jpg - pic by Mac</li>
+						<li>02_revzilla.jpg - pic by Mac</li>
+						<li>03_revzilla.com.png - revzilla.com</li>
+						<li>04_dirt.jpg - https://www.pinterest.com/revzilla/</li>
+						<li>04_kevin.jpg - Kevin Richardson's Facebook Page</li>
+						<li>04_other.gif - https://www.youtube.com/watch?v=dbz-FpjgMAE</li>
+						<li>05_data.png - made by Mac</li>
+						<li>05_purchases.png - made by Mac</li>
+						<li>06_zla.png - revzilla.com</li>
+						<li>08_google.png - Google.com</li>
+						<li>09_designers.jpg - http://www.firemagicgrills.com/grill-series/echelon/black-diamond-edition/black-diamond-edition-island/</li>
+						<li>09_developers.jpg - https://www.buzzfeed.com/jamiejones/disco-power-drill</li>
+						<li>12_kitchen.gif - Revzilla Dev Tool</li>
+						<li>13_atomic.png - http://atomicdesign.bradfrost.com/chapter-2/</li>
+						<li>13_patternlab.gif - http://demo.patternlab.io</li>
+						<li>14_regression.png - https://github.com/Huddle/PhantomCSS</li>
+						<li>06_zla.png - revzilla.com</li>
+						<li>16_specflow.png - http://specflow.org</li>
+						<li>17_netling.png - https://github.com/hallatore/Netling</li>
+						<li>17_qual.jpeg - pic by Mac</li>
+						<li>18_just.png - https://abookapart.com/products/just-enough-research</li>
+						<li>18_lean.jpg - http://www.jeffgothelf.com/lean-ux-book/</li>
+					</ul>
+				</section>
 			</div>
+
 		</div>
 
 		<script src="lib/js/head.min.js"></script>
 		<script src="js/reveal.js"></script>
 
 		<script>
+
 			// More info https://github.com/hakimel/reveal.js#configuration
 			Reveal.initialize({
+				controls: true,
+				progress: true,
 				history: true,
+				center: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
 
 				// More info https://github.com/hakimel/reveal.js#dependencies
 				dependencies: [
-					{ src: 'plugin/markdown/marked.js' },
-					{ src: 'plugin/markdown/markdown.js' },
-					{ src: 'plugin/notes/notes.js', async: true },
-					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true }
 				]
 			});
+
 		</script>
+
 	</body>
 </html>
